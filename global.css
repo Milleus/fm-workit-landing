@@ -49,7 +49,7 @@
   --fw-700: 700;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   :root {
     --fs-700: 3rem;
     --fs-800: 3.75rem;
@@ -383,7 +383,7 @@ header {
   filter: brightness(0) saturate(100%);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 48em) {
   header {
     padding: 2rem 2.5rem 0;
   }
@@ -443,6 +443,8 @@ header {
   .community {
     padding: 6.25rem 2.5rem;
     position: relative;
+    max-width: 48rem;
+    margin-inline: auto;
   }
 
   .community::before {
