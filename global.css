@@ -418,6 +418,7 @@ header {
       url(./assets/images/bg-pattern-2.svg);
     background-repeat: no-repeat;
     background-position: left -225px top 0%, right -95px top 50%;
+    pointer-events: none;
   }
 
   .hero > img {
@@ -452,14 +453,14 @@ header {
     margin-inline: auto;
   }
 
-  .community::before {
+  .community::after {
     content: "";
     position: absolute;
     inset: 0;
     background-image: url(./assets/images/bg-pattern-3.svg);
     background-repeat: no-repeat;
     background-position: bottom 25% right 50px;
-    z-index: 1;
+    pointer-events: none;
   }
 
   .access > img {
