@@ -324,7 +324,17 @@ header {
   z-index: -1;
 }
 
+.benefits > div {
+  --grid-gap: 1rem;
+  justify-items: center;
+  grid-template-areas:
+    "number"
+    "title"
+    "description";
+}
+
 .benefits > div::before {
+  grid-area: number;
   counter-increment: benefits;
   content: counter(benefits);
   border: 1px solid hsl(var(--clr-gray-400));
@@ -336,11 +346,15 @@ header {
   font-size: var(--fs-500);
   line-height: var(--fs-500);
   color: hsl(var(--clr-purple-400));
-  margin: 0 auto 1.5rem;
+}
+
+.benefits > div h3 {
+  grid-area: title;
+  margin-top: 0.5rem;
 }
 
 .benefits > div p {
-  margin-top: 1rem;
+  grid-area: description;
 }
 
 .community {
@@ -418,26 +432,17 @@ header {
   }
 
   .benefits > div {
-    display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-areas:
       "number title"
       "number description";
+    justify-items: start;
+    align-items: center;
     column-gap: 2rem;
   }
 
-  .benefits > div::before {
-    grid-area: number;
-    align-self: center;
-    margin: 0;
-  }
-
   .benefits > div h3 {
-    grid-area: title;
-  }
-
-  .benefits > div p {
-    grid-area: description;
+    margin-top: 0;
   }
 
   .community {
